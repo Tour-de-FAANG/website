@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) Bohdan Shtepan.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+@import '~bootstrap/scss/functions.scss';
+@import '~bootstrap/scss/variables.scss';
+@import '../../variables';
+
+.navbar {
+    padding: 0 !important;
+
+    .navbar-brand,
+    .navbar-brand:hover {
+        color: $fourth-color !important;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .nav-link {
+        &.active {
+            border-bottom-color: $fourth-color;
+            color: $fourth-color !important;
+        }
+
+        &:hover {
+            color: $fourth-color !important;
+        }
+
+        font-size: 18px;
+        border: 3px solid transparent;
+        padding: 1rem 0.75rem !important;
+        color: $white;
+        font-weight: 300;
+    }
+
+    .offcanvas {
+        width: 300px;
+    }
+}

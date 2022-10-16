@@ -1,0 +1,50 @@
+/**
+ * Copyright (c) Bohdan Shtepan.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+@import '~bootstrap/scss/functions.scss';
+@import '~bootstrap/scss/variables.scss';
+@import '~bootstrap/scss/mixins.scss';
+
+$social-banner-height-xs: 104px;
+$social-banner-height-sm: 72px;
+$social-banner-height-lg: 48px;
+
+.social-banner {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    height: $social-banner-height-xs;
+
+    & + header {
+        top: $social-banner-height-xs;
+    }
+
+    @include media-breakpoint-up(sm) {
+        height: $social-banner-height-sm;
+        
+        & + header {
+            top: $social-banner-height-sm;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: $social-banner-height-lg;
+        
+        & + header {
+            top: $social-banner-height-lg;
+        }
+    }
+
+    a[href] {
+        text-decoration: none;
+    }
+
+    .row {
+        width: 100%;
+    }
+}

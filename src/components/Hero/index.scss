@@ -1,0 +1,33 @@
+/**
+ * Copyright (c) Bohdan Shtepan.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+@import '~bootstrap/scss/functions.scss';
+@import '~bootstrap/scss/variables.scss';
+@import '~bootstrap/scss/mixins.scss';
+@import '../../variables';
+
+.hero {
+    background-color: $second-color;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    .container-lg {
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-x: 95%;
+        background-position-y: 15%;
+    
+        @include media-breakpoint-up(lg) {
+            background-size: 32%;
+        }
+    }
+
+    h1 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
