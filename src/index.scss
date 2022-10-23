@@ -33,3 +33,23 @@
         color: white !important;
     }
 }
+
+.disabled {
+    cursor: not-allowed;
+}
+
+a[href]:not(.btn):not(.nav-link) {
+    &:hover,
+    &:active {
+        color: $fourth-color;
+    }
+
+    text-decoration-color: $fourth-color;
+    text-decoration-thickness: 2px;
+    color: $first-color;
+    font-weight: 600;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}

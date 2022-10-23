@@ -23,14 +23,13 @@ export default function HomePage() {
                 <title>{l('Home title')}</title>
             </Helmet>
 
-            <Hero title={l('Home title')} subtitle={l('Home description')} textAlignemnt='text-center' />
+            <Hero title={l('Home title')} subtitle={l('Home description')} />
 
             <section className='container-lg home'>
                 <div className='row'>
                     <div className='col-12'>
                         <br />
                         <p dangerouslySetInnerHTML={{ __html: sanitize(l('Home 1st p')) }} />
-                        <p dangerouslySetInnerHTML={{ __html: sanitize(l('Home 2nd p')) }} />
                         <br />
                     </div>
 
@@ -67,7 +66,7 @@ export default function HomePage() {
                         <br />
                         <h4 className='fs-3 f1w-light text-center' dangerouslySetInnerHTML={{ __html: sanitize(l('Home 2nd subtitle')) }} />
                         <br />
-                        <p dangerouslySetInnerHTML={{ __html: sanitize(l('Home 3rd p')) }} />
+                        <p dangerouslySetInnerHTML={{ __html: sanitize(l('Home 2nd p')) }} />
                     </div>
                 </div>
             </section>
