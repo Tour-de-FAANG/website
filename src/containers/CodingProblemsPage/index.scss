@@ -10,7 +10,7 @@
 @import '~bootstrap/scss/variables.scss';
 @import '../../variables';
 
-.coding-problems {
+.coding-problems-page {
     .problem-level-hard {
         color: $color-red !important;
     }
@@ -35,31 +35,33 @@
         background-color: $color-blue !important;
     }
 
-    a[href] {
-        color: $second-color;
-        text-decoration: none;
-        transition: font-weight 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-        &.active,
-        &:hover {
-            color: $first-color !important;
-            font-weight: bold;
+    .row {
+        a[href] {
+            color: $second-color;
+            text-decoration: none;
+            transition: font-weight 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+            &.active,
+            &:hover {
+                color: $first-color !important;
+                font-weight: bold;
+            }
+    
+            &.active {
+                color: $fourth-color !important;
+                font-weight: bold;
+            }
         }
-
-        &.active {
-            color: $fourth-color !important;
-            font-weight: bold;
-        }
-    }
-
-    .table {
-        .progress {
-            margin-top: 4px;
-        }
-
-        input[type="checkbox"]:checked {
-            background-color: $fourth-color;
-            border-color: $fourth-color;
+    
+        .table {
+            .progress {
+                margin-top: 4px;
+            }
+    
+            input[type="checkbox"]:checked {
+                background-color: $fourth-color;
+                border-color: $fourth-color;
+            }
         }
     }
 }

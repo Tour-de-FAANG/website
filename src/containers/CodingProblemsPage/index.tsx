@@ -127,21 +127,20 @@ export default function CodingProblemsPage() {
 
     return (
         <>
-            <Helmet>
+            <Helmet bodyAttributes={{ class: 'coding-problems-page' }}>
                 <title>{buildTitle(l('Coding Problems'))}</title>
             </Helmet>
 
-            {/* Hero */}
             <Hero title={l('Coding Problems title')} />
 
-            <section className='container-lg coding-problems'>
+            <section className='container-lg'>
                 <div className='row'>
                     <div className='col-12 text-center'>
                         <br />
-                        <p dangerouslySetInnerHTML={{__html: sanitize(l('Coding Problems description'))}}></p>
+                        <p dangerouslySetInnerHTML={{ __html: sanitize(l('Coding Problems description')) }}></p>
                         <br />
                     </div>
-                    <div className='col-12'>
+                    <div className='col-12 gx-0 gx-sm-4'>
                         <ul className='nav nav-tabs nav-fill' id='myTab'>
                             {
                                 COMPANIES_LIST.map(({ name, key }, idx) => <li className='nav-item' key={idx}>
@@ -158,7 +157,7 @@ export default function CodingProblemsPage() {
                                     <th scope='col'></th>
                                     <th scope='col'>Problem</th>
                                     <th scope='col'>Difficulty</th>
-                                    <th scope='col'>Frequency</th>
+                                    <th scope='col' className='d-none d-sm-table-cell'>Frequency</th>
                                 </tr>
                             </thead>
                             <tbody className={'placeholder-glow' + iftrue(!!problemsList.length, ' d-none', '')}>
@@ -173,7 +172,7 @@ export default function CodingProblemsPage() {
                                         <td>
                                             <span className='placeholder col-12'></span>
                                         </td>
-                                        <td>
+                                        <td className='d-none d-sm-table-cell'>
                                             <span className='placeholder col-12'></span>
                                         </td>
                                     </tr>)
@@ -188,7 +187,6 @@ export default function CodingProblemsPage() {
                                                     className='form-check-input'
                                                     type='checkbox'
                                                     id={'problem' + code}
-                                                    // value={code}
                                                     aria-label={name}
                                                     checked={checkedProblems.has(code)}
                                                     onChange={() => onProblemMarkChange(code)}
@@ -197,10 +195,10 @@ export default function CodingProblemsPage() {
                                             </div>
                                         </th>
                                         <td>
-                                            <a href={'https://leetcode.com' + url} target='_blank'>{`${code}.${name}`}</a>
+                                            <a className='lc-problem-link' href={'https://leetcode.com' + url} target='_blank'>{`${code}.${name}`}</a>
                                         </td>
                                         <td className={`problem-level-${caseLevelName(level).toLowerCase()}`}>{caseLevelName(level)}</td>
-                                        <td>
+                                        <td className='d-none d-sm-table-cell'>
                                             <div className='progress'>
                                                 <div
                                                     className={`progress-bar problem-freq-${caseFreqName(freq)}`}
