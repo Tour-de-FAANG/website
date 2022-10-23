@@ -11,7 +11,7 @@ export default function Header() {
             <div className='container-xxl bd-gutter flex-wrap flex-lg-nowrap'>
                 <NavLink to='/' className={'navbar-brand'}>
                     <img src={BRAND_LOGO as unknown as string} alt='Logo' width='52' height='52' className='d-inline-block align-text-center' />
-                    <strong>{l('Brand name')}</strong>
+                    <strong className='fw-medium'>{l('Brand name')}</strong>
                 </NavLink>
                 <button className='navbar-toggler' type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
                     <span className='navbar-toggler-icon'></span>
@@ -34,8 +34,8 @@ export default function Header() {
 
                         <hr className='d-lg-none text-white-50' />
 
-                        <ul className='navbar-nav justify-content-end flex-row flex-grow-1 pe-3'>
-                            <li className='nav-item col-2 col-lg-auto'>
+                        <ul className='navbar-nav justify-content-end flex-row flex-grow-1'>
+                            <li className='nav-item col-4 col-lg-auto'>
                                 <a className='nav-link disabled fs-6 nav-link-version' href='#'>v{packageJson.version}</a>
                             </li>
                             <li className='nav-item col-2 col-lg-auto'>

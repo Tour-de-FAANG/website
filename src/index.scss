@@ -38,7 +38,7 @@
     cursor: not-allowed;
 }
 
-a[href]:not(.btn):not(.nav-link) {
+a[href]:not(.btn):not(.nav-link):not(.lc-problem-link) {
     &:hover,
     &:active {
         color: $fourth-color;

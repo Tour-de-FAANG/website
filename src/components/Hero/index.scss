@@ -47,7 +47,9 @@
         }
 
         @include media-breakpoint-up(xxl) {
-            background-size: 32%;
+            // background-position-x: 100%;
+            background-position-y: 10%;
+            background-size: 30%;
         }
     }
 }
