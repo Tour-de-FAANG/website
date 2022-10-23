@@ -6,7 +6,8 @@
  *
  */
 
-import { Company, NavLink} from './types';
+import { Company, NavLink } from './types';
+import { l } from './localization';
 
 export const TITLE = 'Tour de FAANG';
 
@@ -15,16 +16,25 @@ export const BRAND_LOGO: URL = new URL('../assets/brand/logo.svg', import.meta.u
 
 export const NAV_LINKS: NavLink[] = [{
     path: '/interview-guide',
-    locKey: 'Interview Guide',
-    enabled: false
+    locKey: l('Interview Guide'),
+    enabled: false,
+    description: l('Interview Guide card description'),
+    actionButton: l('Interview Guide card action button text'),
+    icon: '🏅'
 }, {
     path: '/study-guide',
-    locKey: 'Study Guide',
-    enabled: true
+    locKey: l('Study Guide'),
+    enabled: false,
+    description: l('Study Guide card description'),
+    actionButton: l('Study Guide card action button text'),
+    icon: '🧑‍🏫'
 }, {
     path: '/coding-problems',
     locKey: 'Coding Problems',
-    enabled: true
+    enabled: true,
+    description: l('Coding Problems card description'),
+    actionButton: l('Coding Problems card action button text'),
+    icon: '🧮'
 }];
 
 export const COMPANIES_LIST: Company[] = [{

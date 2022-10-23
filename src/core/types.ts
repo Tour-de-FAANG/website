@@ -18,6 +18,9 @@ export interface NavLink {
     path: string;
     locKey: string;
     enabled: boolean;
+    description: string;
+    actionButton: string;
+    icon: string;
 }
 
 export interface Company {

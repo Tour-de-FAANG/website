@@ -5,4 +5,49 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
- 
+
+@import '../../variables';
+
+.home-page {
+    .hero {
+        .container-lg {
+            padding: 5rem 0;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: $fourth-color;
+        }
+
+        h4 {
+            font-weight: 200;
+            padding-top: 1rem;
+        }
+    }
+
+    .home {
+        .card-img-top {
+            background-color: $second-color;
+        }
+
+        .btn-primary {
+            background-color: $fourth-color;
+            border-color: $fourth-color;
+
+            &:hover{
+                background-color: darken($fourth-color, 10);
+            }
+
+            &:active {
+                background-color: darken($fourth-color, 15);
+            }
+        }
+
+        .row:first-child,
+        .row:last-child {
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}
