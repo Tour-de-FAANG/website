@@ -16,13 +16,37 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
     .container-lg {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         background-repeat: no-repeat;
-        background-size: 50%;
-        background-position-x: 95%;
-        background-position-y: 15%;
-        padding: 4rem 0;
+        background-size: 70%;
+        background-position-x: 150%;
+        background-position-y: -20%;
     
+        @include media-breakpoint-up(sm) {
+            background-size: 70%;
+            background-position-x: 160%;
+            background-position-y: 15%;
+        }
+
+        @include media-breakpoint-up(md) {
+            background-size: 50%;
+            background-position-x: 110%;
+            background-position-y: 15%;
+        }
+
         @include media-breakpoint-up(lg) {
+            background-size: 40%;
+            background-position-x: 110%;
+            background-position-y: 0%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            background-size: 35%;
+            background-position-x: 100%;
+        }
+
+        @include media-breakpoint-up(xxl) {
             background-size: 32%;
         }
     }
