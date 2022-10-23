@@ -10,14 +10,16 @@
 @import '~bootstrap/scss/variables.scss';
 @import '~bootstrap/scss/mixins.scss';
 
-$social-banner-height-xs: 104px;
-$social-banner-height-sm: 72px;
-$social-banner-height-lg: 48px;
+$social-banner-height-xs: 64px;
+$social-banner-height-lg: 52px;
+$social-banner-font-size-xs: 14px;
+$social-banner-font-size-sm: 16px;
+$social-banner-font-size-lg: 18px;
 
 .social-banner {
     background-color: black;
     color: white;
-    font-size: 18px;
+    font-size: $social-banner-font-size-xs;
     height: $social-banner-height-xs;
 
     & + header {
@@ -25,14 +27,11 @@ $social-banner-height-lg: 48px;
     }
 
     @include media-breakpoint-up(sm) {
-        height: $social-banner-height-sm;
-        
-        & + header {
-            top: $social-banner-height-sm;
-        }
+        font-size: $social-banner-font-size-sm;
     }
 
     @include media-breakpoint-up(lg) {
+        font-size: $social-banner-font-size-lg;
         height: $social-banner-height-lg;
         
         & + header {
@@ -42,9 +41,5 @@ $social-banner-height-lg: 48px;
 
     a[href] {
         text-decoration: none;
-    }
-
-    .row {
-        width: 100%;
     }
 }

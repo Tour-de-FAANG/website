@@ -14,9 +14,9 @@ import './index.scss';
 export default function SocialBanner() {
     return (
         <header className='navbar navbar-dark sticky-top social-banner'>
-            <div className='container-lg text-center'>
+            <div className='container justify-content-center'>
                 <div className='row'>
-                    <div className='col'>
+                    <div className='col text-center'>
                         <span>{l('Support Ukraine')}</span>
                         &nbsp;
                         <a className='link-info' href={SOCIAL_BANNER_DONATE_LINK} target='_blank'>{l('Support Ukraine2')}</a>
