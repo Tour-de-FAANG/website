@@ -1,8 +1,6 @@
 name: 🧪 Run tests & checks on new PR or master merge
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -22,7 +20,7 @@ jobs:
         with:
           node-version: '14'
 
-      - name: 🔨 Build Project
+      - name: 🧪 Test Project
         run: |
           npm install
           npm run check

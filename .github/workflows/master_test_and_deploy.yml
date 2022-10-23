@@ -1,11 +1,31 @@
-name: 🚀 Deploy website on push
+name: 🚀 Test and deploy on push to master
 
 on:
   push:
     branches: [ "master" ]
 
+  workflow_dispatch:
+
 jobs:
-  web-deploy:
+  test:
+    name: 🥼 Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: 🧪 Test Project
+        run: |
+          npm install
+          npm run check
+
+  deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +50,6 @@ jobs:
         password: ${{ secrets.ftp_password }}
         protocol: ftps
         local-dir: ./output/
-        server-dir: modern-dev/home/virtwww/w_modern-dev-com_6c1851ee/http/tour-de-faang/
+        server-dir: ./http/tour-de-faang/
         dangerous-clean-slate: true
         log-level: verbose
