@@ -1,11 +1,11 @@
 {
   "name": "tour-de-faang",
-  "version": "0.5.0",
-  "description": "Yet another FAANG interview preparation guide.",
+  "version": "0.6.0",
+  "description": "🎉 Yet another FAANG interview preparation guide.",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel ./src/index.html",
     "build": "parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer",
     "check": "tsc --noEmit",
     "prepare": "husky install"

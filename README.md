@@ -1,7 +1,7 @@
 
 ## Tour de FAANG
 
-Yet another FAANG interview preparation guide.
+🎉 Yet another FAANG interview preparation guide.
 
 ## :green_book: License
 
