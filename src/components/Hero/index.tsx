@@ -11,13 +11,16 @@ import { BRAND_LOGO_OP10_512 } from '../../core/consts';
 
 import './index.scss';
 
-export default function Hero({ title }) {
+export default function Hero({ title, subtitle = null, textAlignemnt = 'text-start' }) {
     return (
         <section className='hero text-white'>
             <div className='container-lg' style={{ backgroundImage: `url(${BRAND_LOGO_OP10_512})` }}>
                 <div className='row'>
-                    <div className='col text-start'>
+                    <div className={'col ' + textAlignemnt}>
                         <h1 className='display-5'>{title}</h1>
+                        {
+                            subtitle && <h4>{subtitle}</h4>
+                        }
                     </div>
                 </div>
             </div>
