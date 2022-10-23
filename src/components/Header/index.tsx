@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BRAND_LOGO, NAV_LINKS, PROJECT_GITHUB_LINK, PROJECT_TELEGRAM_LINK } from '../../core/consts';
 import { l } from '../../core/localization';
+import packageJson from '../../../package.json';
 import './index.scss';
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
         <header className='navbar navbar-expand-lg navbar-dark sticky-top bg-dark'>
             <div className='container-xxl bd-gutter flex-wrap flex-lg-nowrap'>
                 <NavLink to='/' className={'navbar-brand'}>
-                    <img src={BRAND_LOGO as unknown as string} alt="Logo" width="52" height="52" className="d-inline-block align-text-center" />
+                    <img src={BRAND_LOGO as unknown as string} alt='Logo' width='52' height='52' className='d-inline-block align-text-center' />
                     <strong>{l('Brand name')}</strong>
                 </NavLink>
                 <button className='navbar-toggler' type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
@@ -34,6 +35,9 @@ export default function Header() {
                         <hr className='d-lg-none text-white-50' />
 
                         <ul className='navbar-nav justify-content-end flex-row flex-grow-1 pe-3'>
+                            <li className='nav-item col-2 col-lg-auto'>
+                                <a className='nav-link disabled fs-6 nav-link-version' href='#'>v{packageJson.version}</a>
+                            </li>
                             <li className='nav-item col-2 col-lg-auto'>
                                 <a className='nav-link py-2 px-0 px-lg-2' href={PROJECT_GITHUB_LINK} rel='noopener'>
                                     <i className='fa-brands fa-github fa-xl'></i>
