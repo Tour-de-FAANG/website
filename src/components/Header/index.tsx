@@ -35,16 +35,16 @@ export default function Header() {
                         <hr className='d-lg-none text-white-50' />
 
                         <ul className='navbar-nav justify-content-end flex-row flex-grow-1'>
-                            <li className='nav-item col-4 col-lg-auto'>
-                                <a className='nav-link disabled fs-6 nav-link-version' href='#'>v{packageJson.version}</a>
+                            <li className='nav-item col col-lg-auto'>
+                                <a className='nav-link disabled fs-6 nav-link-version text-white d-inline-block' href='#'>v{packageJson.version}</a>
                             </li>
-                            <li className='nav-item col-2 col-lg-auto'>
+                            <li className='nav-item col-auto'>
                                 <a className='nav-link py-2 px-0 px-lg-2' href={PROJECT_GITHUB_LINK} rel='noopener'>
                                     <i className='fa-brands fa-github fa-xl'></i>
                                 </a>
                             </li>
 
-                            <li className='nav-item col-2 col-lg-auto'>
+                            <li className='nav-item col-auto'>
                                 <a className='nav-link py-2 px-0 px-lg-2' href={PROJECT_TELEGRAM_LINK} rel='noopener'>
                                     <i className='fa-brands fa-telegram fa-xl'></i>
                                 </a>
