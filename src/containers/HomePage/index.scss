@@ -29,6 +29,11 @@
     .home {
         .card-img-top {
             background-color: $second-color;
+            background-image: url(../../assets/brand/logo_op10_512.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: 4rem;
+            background-position-y: -1rem;
         }
 
         .btn-primary {
